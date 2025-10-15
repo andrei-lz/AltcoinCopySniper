@@ -46,17 +46,18 @@ BuyerFinder.py
 This script fetches trade data for a specified token and saves it to a CSV file.
 
 Configure the script by editing the following variables in BuyerFinder.py:
-
+```
 TOKEN_ADDRESS: The Solana token address to analyze.
 START_DATE and END_DATE: The date range for trade data (format: mm-dd-yyyy).
 MIN_TRADE_SIZE and MAX_TRADE_SIZE: USD value range for filtering trades.
 OUTPUT_FOLDER: Directory to save the output CSV file.
 SORT_TYPE: Sort order for trades (asc or desc).
-
+```
 
 Run the script:
+```
 python BuyerFinder.py
-
+```
 
 Output:
 
@@ -76,27 +77,28 @@ max_buyers: Maximum number of early buyers to analyze (default: 100).
 
 
 Example usage:
+```
 from sniper import implement_strategy
 result = implement_strategy("Df6yfrKC8kZE3KNkrHERKzAetSxbrWeniQfyJY4Jpump", "your_birdeye_api_key")
 print(json.dumps(result, indent=2))
-
+```
 
 Run unit tests:
+```
 python -m unittest sniper.py
-
+```
 
 Output:
 
 A JSON object containing:
+```
 Token creation time.
 List of early buyer addresses.
 Analysis of new wallets among buyers.
 Profit/loss (PnL) for each buyer.
 Interactions between buyers.
 Performance metrics (execution times for each step).
-
-
-
+```
 
 
 Configuration
@@ -111,16 +113,3 @@ API Dependency: Requires a valid Birdeye API key and access to the Solana RPC en
 Data Accuracy: Dependent on the accuracy and availability of Birdeye and Solana API data.
 Rate Limits: Free or low-tier API plans may have restrictive limits, impacting performance for large datasets.
 No File I/O in sniper.py: Unlike BuyerFinder.py, sniper.py does not save results to a file by default.
-
-Contributing
-
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Make changes and commit (git commit -m "Add your feature").
-Push to the branch (git push origin feature/your-feature).
-Create a pull request.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-For issues or questions, open an issue on GitHub or contact the repository owner.
