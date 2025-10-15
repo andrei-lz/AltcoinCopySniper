@@ -22,21 +22,23 @@ Internet connection to access the Birdeye and Solana APIs.
 Installation
 
 Clone the repository:
+```
 git clone https://github.com/andrei-lz/AltcoinCopySniper.git
 cd crypto-trade-analyzer
-
+```
 
 Install dependencies:
+```
 pip install requests pandas
-
+```
 
 Set up your Birdeye API key:
 
 Create a file named dontshare.py in the project directory.
-Add your API key:birdeye_api_key = "your_birdeye_api_key_here"
-
-
-
+Add your API key:
+```
+birdeye_api_key = "your_birdeye_api_key_here"
+```
 
 
 Usage
